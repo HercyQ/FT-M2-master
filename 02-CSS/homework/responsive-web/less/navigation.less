@@ -1,8 +1,9 @@
 // Código de Nav acá
 nav {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;*/
+    .flex-vertical();
     background-color: @nav-bg;
     margin-bottom: 0.5rem;
     border-bottom: 2px solid @nav-border;
@@ -12,15 +13,21 @@ nav {
     }
 
     ul {
-        display: flex;
-        flex-direction: row;
-        font-size: 1.75rem;
+        /*display: flex;
+        flex-direction: row;*/
+        .flex-horizontal();
+        font-size: 1.60rem;
         font-weight: 500;
         margin-bottom: 1rem;
 
 
         li+li {
             margin-left: 2rem;
+
+            @media @phone {
+                margin-left: 1rem;
+                font-size: 1.50rem;
+            }
         }
 
         li {
